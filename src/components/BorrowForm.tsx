@@ -26,15 +26,17 @@ const BorrowForm: React.FC<BorrowFormProps> = ({ onSubmit, availableCopies, isLo
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Quantity *
         </label>
-        <input
-          type="number"
-          {...register('quantity', {
-            required: 'Quantity is required',
-            min: { value: 1, message: 'At least 1 copy required' },
-            max: { value: availableCopies, message: `Only ${availableCopies} copies available` }
-          })}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+       <input
+        type="number"
+        defaultValue={1}
+        {...register('quantity', {
+          required: 'Quantity is required',
+          valueAsNumber: true,   // ✅ force number
+          min: { value: 1, message: 'At least 1 copy required' },
+          max: { value: availableCopies, message: `Only ${availableCopies} copies available` }
+        })}
+        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
         {errors.quantity && (
           <p className="text-red-500 text-sm mt-1">{errors.quantity.message}</p>
         )}
