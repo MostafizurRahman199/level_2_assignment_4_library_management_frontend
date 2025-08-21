@@ -5,9 +5,10 @@ import type { BookFormData } from "../types";
 interface BookFormProps {
   onSubmit: (data: BookFormData) => void;
   initialValues?: BookFormData;
+  heading:string
 }
 
-const BookForm: React.FC<BookFormProps> = ({ onSubmit, initialValues }) => {
+const BookForm: React.FC<BookFormProps> = ({ onSubmit, initialValues, heading  }) => {
   const {
     register,
     handleSubmit,
@@ -24,7 +25,7 @@ const BookForm: React.FC<BookFormProps> = ({ onSubmit, initialValues }) => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-6 flex items-center justify-center">
+    <div className="min-h-screen w-full mx-auto   p-6 flex items-center justify-center">
       <div className="max-w-4xl w-full bg-white/70 backdrop-blur-md shadow-2xl rounded-3xl p-8 border border-white/20 relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full blur-3xl"></div>
@@ -37,7 +38,7 @@ const BookForm: React.FC<BookFormProps> = ({ onSubmit, initialValues }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-blue-600 bg-clip-text text-transparent mb-2">Add / Edit Book</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-blue-600 bg-clip-text text-transparent mb-2">{heading}</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto"></div>
           </div>
 

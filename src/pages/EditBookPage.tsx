@@ -10,7 +10,7 @@ const EditBookPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { data: book, isLoading: isLoadingBook } = useGetBookQuery(id!);
-  const [updateBook, { isLoading }] = useUpdateBookMutation();
+  const [updateBook] = useUpdateBookMutation();
 
 
 
@@ -46,9 +46,9 @@ const EditBookPage: React.FC = () => {
 
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Edit Book</h1>
-     <BookForm  onSubmit={handleSubmit} initialValues={book}/>
+    <div className='min-h-screen w-full flex flex-col items-center justify-start py-16 px-4 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200'>
+    
+     <BookForm  onSubmit={handleSubmit} initialValues={book} heading={"Edit Book"}/>
  
     </div>
   );

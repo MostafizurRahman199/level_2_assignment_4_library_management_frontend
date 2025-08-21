@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gray-50 flex flex-col">
           <Navbar />
-          <main className="flex-grow container mx-auto px-4 ">
+          <main className="flex-grow ">
             <Routes>
               <Route path="/" element={<BooksPage />} />
               <Route path="/books" element={<BooksPage />} />

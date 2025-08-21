@@ -33,7 +33,7 @@ export const borrowApi = createApi({
         method: 'POST',
         body: borrowData,
       }),
-      invalidatesTags: (result, error, { bookId }) => [
+      invalidatesTags: (_result, _error, { bookId }) => [
         { type: 'Book', id: bookId }, // ✅ refetch single book
         'Book',                       // ✅ refetch book list
         'Borrow',

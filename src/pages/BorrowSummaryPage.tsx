@@ -24,8 +24,10 @@ const BorrowSummaryPage: React.FC = () => {
   }
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Borrow Summary</h1>
+    <div className='min-h-screen w-full flex flex-col items-center justify-start py-16 px-4 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200'>
+      <h1 className="text-4xl font-extrabold text-blue-800 m-4 text-center">
+          Borrow Summary
+        </h1>
       {data && <BorrowSummary data={data} />}
     </div>
   );

@@ -11,7 +11,7 @@ const AddBookPage: React.FC = () => {
 
 
   const navigate = useNavigate();
-  const [createBook, { isLoading }] = useCreateBookMutation();
+  const [createBook] = useCreateBookMutation();
 
 
 const handleSubmit = async (data: BookFormData) => {
@@ -26,9 +26,9 @@ const handleSubmit = async (data: BookFormData) => {
 
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Add New Book</h1>
-      <BookForm onSubmit={handleSubmit}  />
+    <div className='min-h-screen w-full flex flex-col items-center justify-start py-16 px-4 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200'>
+     
+      <BookForm onSubmit={handleSubmit}  heading={"Add Book"} />
     </div>
   );
 };

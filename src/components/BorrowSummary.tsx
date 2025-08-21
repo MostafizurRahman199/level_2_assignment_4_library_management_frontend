@@ -15,7 +15,7 @@ const BorrowSummary: React.FC<BorrowSummaryProps> = ({ data }) => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow overflow-hidden">
+    <div className="bg-white w-10/12 mx-auto rounded-lg shadow overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full table-auto">
           <thead className="bg-gray-50">
