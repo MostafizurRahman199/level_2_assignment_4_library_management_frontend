@@ -1,20 +1,17 @@
-Perfect 🚀 You’ve written a great project description. I’ll now **reformat it properly into a `README.md` syntax** so it looks clean, professional, and GitHub-ready.
 
-Here’s the rewritten README:
-
----
-
-````markdown
 # 📚 Library Management System
 
 A full-stack **Library Management System** built with **React, TypeScript, Node.js, Express, and MongoDB**.  
 This application allows users to manage books, track borrowing activities, and view library statistics.
 
----
+
 
 ## 🌟 Features
 
-### Frontend
+### Frontend 
+
+link : https://level2-ass-2-library-management.netlify.app/
+
 - 📖 **Book Management**: View, add, edit, and delete books  
 - 🔄 **Borrow System**: Borrow books with due dates and quantity tracking  
 - 📱 **Responsive Design**: Mobile-friendly interface using Tailwind CSS  
@@ -22,6 +19,9 @@ This application allows users to manage books, track borrowing activities, and v
 - 🛡️ **Type Safety**: Full TypeScript implementation  
 
 ### Backend
+
+Live Link : https://level-2-assignment-2-backend-librar.vercel.app/api
+
 - 🔗 **RESTful API**: Clean API endpoints for all operations  
 - 🗄️ **MongoDB Integration**: Mongoose ODM for data modeling  
 - 📑 **Pagination**: Efficient data retrieval for large book collections  
