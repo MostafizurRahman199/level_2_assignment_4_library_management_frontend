@@ -88,11 +88,18 @@ const BooksPage: React.FC = () => {
   }
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-800">All Books</h1>
-      </div>
-      {data && (
+ 
+
+
+
+<div className="min-h-screen w-full flex flex-col items-center justify-start py-16 px-4 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+    
+        <h1 className="text-4xl font-extrabold text-blue-800 mb-4 text-center">
+          All Books
+        </h1>
+       
+
+       {data && (
         <BookList
           books={data.books}
           currentPage={page}
@@ -100,6 +107,7 @@ const BooksPage: React.FC = () => {
           onPageChange={handlePageChange}
         />
       )}
+    
     </div>
   );
 };
